@@ -13,7 +13,7 @@ private:
 public:
     Multimedia(std::string name, std::string filename);
     Multimedia();
-    ~Multimedia();
+    virtual ~Multimedia();
 
     void setName(std::string name);
     void setFilename(std::string filename);
@@ -21,10 +21,10 @@ public:
     std::string getName() const;
     std::string getFilename() const;
 
+    void printValues(std::ostream &out) const;
+
+    virtual void display() const = 0;
+
 };
 
 #endif // MULTIMEDIA_H
-
-
-
-// fonction qui print

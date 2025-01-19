@@ -8,15 +8,17 @@ private:
     int duration;
 
 public:
+    Video(std::string name, std::string filename) : Multimedia(name, filename), duration(0) {}
     Video(std::string name, std::string filename, int duration) : Multimedia(name, filename), duration(duration) {
     }
-    ~Video();
+    ~Video() override {};
 
     void setDuration(int duration);
 
     int getDuration();
 
-    void displaysVideo() {
+    void display() const override {
+        std::cout << "Ceci est une vidéo." << std::endl;
         std::string command = "mpv " + this->getFilename() + " &";
         system(command.data());
     }

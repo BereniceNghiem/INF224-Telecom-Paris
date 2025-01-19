@@ -9,10 +9,11 @@ private:
     float longitude;
 
 public:
+    Photo(std::string name, std::string filename) : Multimedia(name, filename), latitude(0), longitude(0) {}
     Photo(std::string name, std::string filename, float latitude, float longitude) : Multimedia(name, filename), latitude(latitude), longitude(longitude) {
 
     }
-    ~Photo();
+    ~Photo() override {};
 
     void setLatitude(float latitude);
     void setLongitude(float longitude);
@@ -20,10 +21,14 @@ public:
     float getLatitude();
     float getLongitude();
 
-    void displaysPhoto() {
+    void display() const override {
+        std::cout << "Ceci est une photo." << std::endl;
         std::string command = "imagej " + this->getFilename() + " &";
         system(command.data());
     }
 };
 
 #endif // PHOTO_H
+
+
+

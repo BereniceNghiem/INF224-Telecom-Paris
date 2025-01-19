@@ -25,8 +25,7 @@ OBJETS = ${SOURCES:%.cpp=%.o}
 #
 # Compilateur C++
 #
-# CXX = c++
-CXX = g++
+CXX = c++
 
 #
 # Options du compilateur C++
