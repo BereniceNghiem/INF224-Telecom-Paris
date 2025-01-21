@@ -14,7 +14,12 @@ private:
     std::string name; 
 
 public:
-    explicit Group(const std::string& groupName) : name(groupName) {}
+    //explicit Group(const std::string& groupName) : name(groupName) {}
+
+    Group() : name("") {}
+    Group(const std::string& groupName) : name(groupName) {}
+
+    virtual ~Group() {}
 
     const std::string& getName() const {
         return name;

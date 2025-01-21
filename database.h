@@ -7,10 +7,10 @@
 #include <memory>
 #include <algorithm>
 #include "multimedia.h"
-#include "photo.h"
-#include "video.h"
-#include "film.h"
-#include "group.h"
+#include "photo.hpp"
+#include "video.hpp"
+#include "film.hpp"
+#include "group.hpp"
 
 class Database {
 private:
@@ -18,77 +18,20 @@ private:
     std::map<std::string, std::shared_ptr<Group>> groupTable;
 
 public:
-    std::shared_ptr<Photo> createPhoto(const std::string& name, const std::string& filename) {
-        auto photo = std::make_shared<Photo>(name, filename);
-        mediaTable[name] = photo;
-        return photo;
-    }
+    std::shared_ptr<Photo> createPhoto(const std::string& name, const std::string& filename);
+    std::shared_ptr<Video> createVideo(const std::string& name, const std::string& filename, int duration);
+    std::shared_ptr<Film> createFilm(const std::string& name, const std::string& filename, int duration, const int* durations, size_t count);
+    std::shared_ptr<Group> createGroup(const std::string& name);
 
-    std::shared_ptr<Video> createVideo(const std::string& name, const std::string& filename, int duration) {
-        auto video = std::make_shared<Video>(name, filename, duration);
-        mediaTable[name] = video;
-        return video;
-    }
+    void displayMedia(const std::string& name) const;
 
-    std::shared_ptr<Film> createFilm(const std::string& name, const std::string& filename, int duration, const int* durations, size_t count) {
-        auto film = std::make_shared<Film>(name, filename, duration, durations, count);
-        mediaTable[name] = film;
-        return film;
-    }
+    void displayGroup(const std::string& name) const;
 
-    std::shared_ptr<Group> createGroup(const std::string& name) {
-        auto group = std::make_shared<Group>(name);
-        groupTable[name] = group;
-        return group;
-    }
+    void playMedia(const std::string& name) const;
 
-    void displayMedia(const std::string& name) const {
-        auto it = mediaTable.find(name);
-        if (it != mediaTable.end()) {
-            it->second->display();
-        } else {
-            std::cout << "Objet multimédia '" << name << "' non trouvé." << std::endl;
-        }
-    }
+    void deleteMedia(const std::string& name);
 
-    void displayGroup(const std::string& name) const {
-        auto it = groupTable.find(name);
-        if (it != groupTable.end()) {
-            std::cout << "Groupe '" << name << "' : " << std::endl;
-            it->second->display();
-        } else {
-            std::cout << "Groupe '" << name << "' non trouvé." << std::endl;
-        }
-    }
-
-    void playMedia(const std::string& name) const {
-        auto it = mediaTable.find(name);
-        if (it != mediaTable.end()) {
-            it->second->display();
-        } else {
-            std::cout << "Objet multimédia '" << name << "' non trouvé." << std::endl;
-        }
-    }
-
-    void deleteMedia(const std::string& name) {
-        auto it = mediaTable.find(name);
-        if (it != mediaTable.end()) {
-            mediaTable.erase(it);
-            std::cout << "Objet multimédia '" << name << "' supprimé." << std::endl;
-        } else {
-            std::cout << "Objet multimédia '" << name << "' non trouvé." << std::endl;
-        }
-    }
-
-    void deleteGroup(const std::string& name) {
-        auto it = groupTable.find(name);
-        if (it != groupTable.end()) {
-            groupTable.erase(it);
-            std::cout << "Groupe '" << name << "' supprimé." << std::endl;
-        } else {
-            std::cout << "Groupe '" << name << "' non trouvé." << std::endl;
-        }
-    }
+    void deleteGroup(const std::string& name);
 };
 
 #endif // DATABASE_H

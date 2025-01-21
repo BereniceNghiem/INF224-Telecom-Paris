@@ -1,10 +1,10 @@
 #include <iostream>
 
 #include "multimedia.h"
-#include "photo.h"
-#include "video.h"
-#include "film.h"
-#include "group.h"
+#include "photo.hpp"
+#include "video.hpp"
+#include "film.hpp"
+#include "group.hpp"
 #include "database.h"
 #include <vector>
 
@@ -34,7 +34,7 @@ void play_table() {
     multimediaList.push_back(new Photo("pomme", "pomme.jpg"));
     for (const auto& multimedia : multimediaList) {
         std::cout << "=== Affichage des informations ===" << std::endl;
-        multimedia->display(); 
+        multimedia->display();
         std::cout << std::endl;
     }
 
@@ -90,6 +90,6 @@ void database() {
 
 int main(int argc, const char* argv[])
 {
-    database();
+    groups();
 }
 
