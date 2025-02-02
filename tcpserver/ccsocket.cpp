@@ -413,7 +413,8 @@ SOCKSIZE SocketBuffer::writeLine(const string& str) {
 
   // if len is not too large, try to send everything in one block
   if (len <= outsize_) {
-    char* buf = (char*)malloc(len);
+    //char* buf = (char*)malloc(len);
+    char* buf = new char[len];
     ::memcpy(buf, str.c_str(), str.length());
     if (outsep_ >= 0) buf[len - 1] = char(outsep_);
     else {

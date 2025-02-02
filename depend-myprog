@@ -1,3 +1,7 @@
+main.o: main.cpp tcpserver.h ccsocket.h multimedia.h photo.hpp video.hpp \
+ film.hpp group.hpp database.h
 multimedia.o: multimedia.cpp multimedia.h
-main.o: main.cpp multimedia.h photo.hpp video.hpp film.hpp group.hpp \
- database.h
+database.o: database.cpp database.h multimedia.h photo.hpp video.hpp \
+ film.hpp group.hpp
+client.o: client.cpp ccsocket.h
+server.o: server.cpp tcpserver.h ccsocket.h

@@ -1,3 +1,8 @@
+/**
+ * @file group.hpp
+ * @author Bérénice Nghiêm (berenice.nghiem@telecom-paris.fr)
+ */
+
 #ifndef GROUP_H
 #define GROUP_H
 #include "multimedia.h"
@@ -9,27 +14,45 @@
 
 using MultimediaPtr = std::shared_ptr<Multimedia>;  // Alias pour std::shared_ptr<Multimedia>
 
+/**
+ * @class Group
+ * @brief Classe pour les objets de type groupe
+ * 
+ * Classe dérivant d'une liste d'objets multimedia
+ * Fournit les méthodes qui renvoie le nom du groupe et qui affiche les attributs de tous les objets de la liste
+ */
 class Group : public std::list<MultimediaPtr> {
 private:
-    std::string name; 
+    std::string name; // Nom du groupe
 
 public:
-    //explicit Group(const std::string& groupName) : name(groupName) {}
-
+    /**
+     * @brief Constructeur de la classe Group
+     */
     Group() : name("") {}
-    Group(const std::string& groupName) : name(groupName) {}
+    /**
+     * @brief Constructeur de la classe Group avec paramètres
+     * 
+     * @param groupName Le nom du groupe
+     */
+    Group(std::string groupName) : name(groupName) {}                  
 
-    virtual ~Group() {}
-
-    const std::string& getName() const {
+    /**
+     * @brief Méthode pour obtenir le nom du groupe
+     * 
+     * @param groupName Nom du groupe
+     */
+    std::string getName() const {
         return name;
     }
-
-    void display() const {
-        std::cout << "Groupe: " << name << std::endl;
+ 
+    /**
+     * @brief Méthode pour afficher le nom du groupe et les objets de la liste
+     */
+    void printValues(std::ostream& out) const {
+        out << "Groupe: " << name;
         for (const auto& multimedia : *this) {
-            multimedia->display();
-            std::cout << std::endl;
+            multimedia->printValues(out);
         }
     }
 };

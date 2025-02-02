@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 Multimedia::Multimedia(std::string name, std::string filename) {
     this->name = name;
     this->filename = filename;
@@ -31,8 +32,17 @@ std::string Multimedia::getFilename() const{
     return filename;
 }
 
-void Multimedia::printValues(std::ostream &out) const{
-    std::cout << "Nom : " << name << std::endl;
-    std::cout <<"Nom du ficher : " << filename << std::endl;
+void Multimedia::write(std::ostream& f) const{
+    f << name << '\n';
+    f << filename << '\n';
+}
+
+void Multimedia::read(std::istream& f) {
+    f >> name >> filename;
+}
+
+void Multimedia::printValues(std::ostream& out) const{
+    out << "Nom : " << name;
+    out << "Nom du ficher : " << filename;
 
 }
