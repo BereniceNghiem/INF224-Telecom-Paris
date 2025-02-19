@@ -88,7 +88,11 @@ public:
      * @param f Flux d'entrée
      */
     void read(std::istream& f) override {
-        f >> name >> filename >> duration;
+        std::string endline;
+        getline(f, name);
+        getline(f, filename);
+        f >> duration;
+        getline(f, endline);
     }
 
     /**

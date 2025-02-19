@@ -108,7 +108,9 @@ public:
      */
     void read(std::istream& f) override {
         Multimedia::read(f);
+        std::string endline;
         f >> latitude >> longitude;
+        getline(f, endline);
     }
 
     /**

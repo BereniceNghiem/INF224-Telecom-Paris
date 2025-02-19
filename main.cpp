@@ -29,7 +29,7 @@ int main(int argc, const char* argv[])
     db.createPhoto("pomme", "pomme.jpg");
     db.createVideo("cheval", "cheval.mp4", 26);
     int durations[] = {10, 15};
-    db.createFilm("cheval", "cheval.mp4", 120, durations, 2);
+    db.createFilm("cheval2", "cheval2.mp4", 120, durations, 2);
 
     auto* server =
     new TCPServer( [&](std::string const& request, std::string& response) {
@@ -38,9 +38,9 @@ int main(int argc, const char* argv[])
         std::cout << "request: " << request << std::endl;
         std::string answer{};
 
-        if (request.find("find media") != std::string::npos) 
+        if (request.find("find media") != std::string::npos)                 // faore une méthode dans database 
         {
-            std::string search = "find media ";  
+            std::string search = "find media ";                                       // découper la requête avant
             size_t pos = request.find(search);  // Trouver la position de "create photo"
             std::string result = request.substr(pos + search.length());
 
@@ -175,7 +175,7 @@ void database() {
     db.createPhoto("pomme", "pomme.jpg");
     db.createVideo("cheval", "cheval.mp4", 26);
     int durations[] = {10, 15};
-    db.createFilm("cheval", "cheval.mp4", 120, durations, 2);
+    db.createFilm("cheval2", "cheval2.mp4", 120, durations, 2);
 
     auto group1 = db.createGroup("groupe1");
 
@@ -188,58 +188,31 @@ void database() {
     db.deleteGroup("groupe1");
 }
 
-
-std::shared_ptr<Multimedia> createMultimedia(const std::string & type) {
-        if (type == "Photo") return std::make_shared<Photo>();
-        else if (type == "Video") return std::make_shared<Video>();
-        else if (type == "Film") return std::make_shared<Film>();
-        return nullptr;
-    }
-
-bool saveAll(const std::string & filename, Group & objects) {
-    std::ofstream f(filename);
-    if (!f) {   // vérifier que le ficher est ouvert
-        cerr << "Can't open file " << filename << endl;
-        return false;
-    }
-    for (auto it : objects) {
-        f << it->getType() << '\n'; // écrire la classe puis les attributs
-        it->write(f);
-    }
-    if (f.fail()) {                       
-        cerr << "Write error in " << filename << endl;
-        return false;
-    } 
-    return true;
-}
-
-bool readAll(const std::string & filename, Group & objects) {
-    std::ifstream f(filename);
-    if (!f) {
-        cerr << "Can't open file " << filename << endl;
-        return false;
-    }
-    while (f) {  // tant que pas fin de fichier et pas d'erreur  
-        std::string type;
-        getline(f, type);
-        std::shared_ptr<Multimedia> obj = createMultimedia(type);  // factory qui crée les objets
-        obj->read(f);  // pareil que (*obj).read(f);
-        if (f.fail()) {                       
-            cerr << "Read error in " << filename << endl;
-            return false;
-        } 
-        else objects.push_back(obj);
-    }
-    return true; 
-}
-
 void serialisation() {
-    Group group1("groupe 1");
-    Group group2("groupe 2");
-    group1.push_back(std::make_shared<Photo>("pomme", "pomme.jpg"));
-    saveAll("serialisation.txt", group1);  // {new Photo("pomme", "pomme.jpg"), new Video("cheval", "cheval.mp4")}
-    readAll("serialisation.txt", group2);
-    group2.printValues(std::cout);
+
+    Database db;
+
+    db.createPhoto("pomme", "pomme.jpg");
+    db.createPhoto("pomme2", "pomme.jpg");
+    db.createVideo("cheval", "cheval.mp4", 26);
+    int durations[] = {10, 15};
+    db.createFilm("cheval2", "cheval2.mp4", 120, durations, 2);
+    db.createFilm("cheval33", "cheval2.mp4", 120, durations, 2);
+    
+    Database db2;
+    
+    db.saveAll("serialisation.txt");  
+    db2.readAll("serialisation.txt");
+
+    db2.findMedia("pomme", std::cout);
+    db2.findMedia("cheval", std::cout);
+
+//     Group group1("groupe 1");
+//     Group group2("groupe 2");
+//     group1.push_back(std::make_shared<Photo>("pomme", "pomme.jpg"));
+//     saveAll("serialisation.txt", group1);  // {new Photo("pomme", "pomme.jpg"), new Video("cheval", "cheval.mp4")}
+//     readAll("serialisation.txt", group2);
+//     group2.printValues(std::cout);
 }
 
 int main(int argc, const char* argv[])

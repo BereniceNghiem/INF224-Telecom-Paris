@@ -7,6 +7,7 @@
 #define FILM_H
 #include "video.hpp"
 
+
 /**
  * @class Film
  * @brief Classe pour les objets de type film
@@ -122,7 +123,6 @@ public:
         for (int i = 0; i < chapters; ++i) {
             f << chapterDurations[i] << "\n";
         }
-        f << '\n';
     }
     
     /**
@@ -138,6 +138,8 @@ public:
         for (int i = 0; i < chapters; ++i) {
             f >> chapterDurations[i];
         }
+        std::string endline;
+        getline(f, endline);
     }
 
     /**

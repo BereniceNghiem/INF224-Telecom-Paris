@@ -8,6 +8,7 @@
 #define DATABASE_H
 
 #include <iostream>
+#include <regex>
 #include <string>
 #include <map>
 #include <memory>
@@ -18,6 +19,24 @@
 #include "film.hpp"
 #include "group.hpp"
 
+
+class DuplicateName : public std::exception {
+    const char* what() const noexcept override {
+        return "Nom du groupe ou objet déjà existant.";
+    }
+};
+
+class NotFound : public std::exception {
+    const char* what() const noexcept override {
+        return "Groupe ou objet introuvable.";
+    }
+};
+
+class InvalidName : public std::exception {
+    const char* what() const noexcept override {
+        return "Nom contenant des caractères invalides.";
+    }
+};
 
 /**
  * @class Database
@@ -34,6 +53,13 @@ private:
     std::map<std::string, std::shared_ptr<Group>> groupTable; // Tableau associatif contenant les groupes
 
 public:
+    /**
+     * @brief Méthode qui crée un objet multimédia
+     *
+     * @param type Le type de l'objet multimédia
+     * @return std::shared_ptr<Multimedia> Pointeur intelligent vers l'objet multimédia créé
+     */
+    std::shared_ptr<Multimedia> createMultimedia(const std::string & type);
     /**
      * @brief Méthode qui crée une photo
      *
@@ -103,6 +129,10 @@ public:
      * @param name Le nom du groupe
      */
     void deleteGroup(const std::string& name);
+
+    bool saveAll(const std::string & filename);
+
+    bool readAll(const std::string & filename);
 };
 
 #endif // DATABASE_H

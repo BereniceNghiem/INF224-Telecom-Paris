@@ -59,7 +59,7 @@ LDLIBS= -lpthread
 
 all: ${CLIENT} ${SERVER}
 
-run-${SERVER}: ${SERVER}
+run: ${SERVER}
 	./${SERVER}
 
 run-${CLIENT}: ${CLIENT}
