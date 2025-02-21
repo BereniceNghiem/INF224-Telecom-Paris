@@ -1,0 +1,54 @@
+\hypertarget{classFenetrePrincipale}{}\doxysection{Fenetre\+Principale Class Reference}
+\label{classFenetrePrincipale}\index{FenetrePrincipale@{FenetrePrincipale}}
+
+
+Classe créant l\textquotesingle{}interface graphique Java/\+Swing.  
+
+
+
+
+Inheritance diagram for Fenetre\+Principale\+:
+% FIG 0
+
+
+Collaboration diagram for Fenetre\+Principale\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFenetrePrincipale_a16077a3b91ee69d150a4dbf399b54a52}\label{classFenetrePrincipale_a16077a3b91ee69d150a4dbf399b54a52}} 
+\mbox{\hyperlink{classFenetrePrincipale_a16077a3b91ee69d150a4dbf399b54a52}{Fenetre\+Principale}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur initialisant l\textquotesingle{}interface graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classFenetrePrincipale_af47ee363958da49e7f0b912efcd27de0}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Méthode principale pour lancer l\textquotesingle{}application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe créant l\textquotesingle{}interface graphique Java/\+Swing. 
+
+Classe principale créant une fenêtre avec une zone de texte, une barre de menus, une barre d\textquotesingle{}outils, et permettant une interaction client/serveur pour rechercher et jouer des objets multimédias. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFenetrePrincipale_af47ee363958da49e7f0b912efcd27de0}\label{classFenetrePrincipale_af47ee363958da49e7f0b912efcd27de0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!main@{main}}
+\index{main@{main}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Fenetre\+Principale.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Méthode principale pour lancer l\textquotesingle{}application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Arguments de la ligne de commande (non utilisés ici). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FenetrePrincipale_8java}{Fenetre\+Principale.\+java}}\end{DoxyCompactItemize}
