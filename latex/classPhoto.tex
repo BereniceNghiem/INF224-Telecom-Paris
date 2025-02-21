@@ -1,0 +1,233 @@
+\hypertarget{classPhoto}{}\doxysection{Photo Class Reference}
+\label{classPhoto}\index{Photo@{Photo}}
+
+
+Classe pour les objets de type photo.  
+
+
+
+
+{\ttfamily \#include $<$photo.\+hpp$>$}
+
+
+
+Inheritance diagram for Photo\+:
+% FIG 0
+
+
+Collaboration diagram for Photo\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}\label{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}} 
+\mbox{\hyperlink{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}{Photo}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \mbox{\hyperlink{classPhoto}{Photo}} Initialise l\textquotesingle{}objet photo avec un nom vide et un nom de fichier vide. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPhoto_a0cf4b140e08030100774040269da8e46}{Photo}} (std\+::string name, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{classPhoto}{Photo}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPhoto_afc99c28e784046d1429698f2f3aa4857}{Photo}} (std\+::string name, std\+::string filename, float latitude, float longitude)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{classPhoto}{Photo}} avec paramètres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_afcef9aedae7e9a33c92282597221c121}{set\+Latitude}} (float latitude)
+\begin{DoxyCompactList}\small\item\em Méthode pour définir la latitude de la photo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_a06617ad1dc4c7d5db689b10ec26deb4b}{set\+Longitude}} (float longitude)
+\begin{DoxyCompactList}\small\item\em Méthode pour définir la longitude de la photo. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPhoto_ab5210f7e59cebdd09bb470bd10455c8a}{get\+Latitude}} () const
+\begin{DoxyCompactList}\small\item\em Méthode pour obtenir la latitude de la photo. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPhoto_a5410155fe937b7ccc21d6335d8fc7e2c}{get\+Longitude}} () const
+\begin{DoxyCompactList}\small\item\em Méthode pour obtenir la longitude de la photo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPhoto_a72de9a09056cbf7d690be01b7f99f3f7}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Méthode pour obtenir le type de l\textquotesingle{}objet photo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_a6cd4f8f6c2a9de796d9713968dad48d8}{write}} (std\+::ostream \&f) const override
+\begin{DoxyCompactList}\small\item\em Méthode pour écrire les valeurs de l\textquotesingle{}objet photo dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_add870bd2c24d91348f95ad632c9347bf}{read}} (std\+::istream \&f) override
+\begin{DoxyCompactList}\small\item\em Méthode pour lire les valeurs de l\textquotesingle{}objet photo depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhoto_a2844c3d4da6f1726cf788bf0929f6333}{print\+Values}} (std\+::ostream \&out) const override
+\begin{DoxyCompactList}\small\item\em Méthode pour afficher les valeurs de l\textquotesingle{}objet photo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}\label{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}} 
+void \mbox{\hyperlink{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}{play}} () const override
+\begin{DoxyCompactList}\small\item\em Méthode pour jouer l\textquotesingle{}objet photo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Classe pour les objets de type photo. 
+
+Classe qui sert à créer et manipuler des objets de type photo Fournit les méthodes pour créer un objet photo, afficher ses valeurs, ou encore l\textquotesingle{}afficher 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPhoto_a0cf4b140e08030100774040269da8e46}\label{classPhoto_a0cf4b140e08030100774040269da8e46}} 
+\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{Photo()}{Photo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Photo\+::\+Photo (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{classPhoto}{Photo}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet photo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet photo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhoto_afc99c28e784046d1429698f2f3aa4857}\label{classPhoto_afc99c28e784046d1429698f2f3aa4857}} 
+\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{Photo()}{Photo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Photo\+::\+Photo (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filename,  }\item[{float}]{latitude,  }\item[{float}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{classPhoto}{Photo}} avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet photo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet photo \\
+\hline
+{\em latitude} & La latitude de la photo \\
+\hline
+{\em longitude} & La longitude de la photo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPhoto_ab5210f7e59cebdd09bb470bd10455c8a}\label{classPhoto_ab5210f7e59cebdd09bb470bd10455c8a}} 
+\index{Photo@{Photo}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{getLatitude()}{getLatitude()}}
+{\footnotesize\ttfamily float Photo\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour obtenir la latitude de la photo. 
+
+\begin{DoxyReturn}{Returns}
+float Latitude de la photo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhoto_a5410155fe937b7ccc21d6335d8fc7e2c}\label{classPhoto_a5410155fe937b7ccc21d6335d8fc7e2c}} 
+\index{Photo@{Photo}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{getLongitude()}{getLongitude()}}
+{\footnotesize\ttfamily float Photo\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour obtenir la longitude de la photo. 
+
+\begin{DoxyReturn}{Returns}
+float Longitude de la photo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhoto_a72de9a09056cbf7d690be01b7f99f3f7}\label{classPhoto_a72de9a09056cbf7d690be01b7f99f3f7}} 
+\index{Photo@{Photo}!getType@{getType}}
+\index{getType@{getType}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Photo\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour obtenir le type de l\textquotesingle{}objet photo. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Type de l\textquotesingle{}objet photo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMultimedia_a14770025ca95da6df32ae141b9b75da5}{Multimedia}}.
+
+\mbox{\Hypertarget{classPhoto_a2844c3d4da6f1726cf788bf0929f6333}\label{classPhoto_a2844c3d4da6f1726cf788bf0929f6333}} 
+\index{Photo@{Photo}!printValues@{printValues}}
+\index{printValues@{printValues}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{printValues()}{printValues()}}
+{\footnotesize\ttfamily void Photo\+::print\+Values (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour afficher les valeurs de l\textquotesingle{}objet photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Flux de sortie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_a670c5e7635860b676dce28b955093f73}{Multimedia}}.
+
+\mbox{\Hypertarget{classPhoto_add870bd2c24d91348f95ad632c9347bf}\label{classPhoto_add870bd2c24d91348f95ad632c9347bf}} 
+\index{Photo@{Photo}!read@{read}}
+\index{read@{read}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Photo\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour lire les valeurs de l\textquotesingle{}objet photo depuis un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flux d\textquotesingle{}entrée \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ae3278f47cb5425a460c2eb77d6cef9f7}{Multimedia}}.
+
+\mbox{\Hypertarget{classPhoto_afcef9aedae7e9a33c92282597221c121}\label{classPhoto_afcef9aedae7e9a33c92282597221c121}} 
+\index{Photo@{Photo}!setLatitude@{setLatitude}}
+\index{setLatitude@{setLatitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{setLatitude()}{setLatitude()}}
+{\footnotesize\ttfamily void Photo\+::set\+Latitude (\begin{DoxyParamCaption}\item[{float}]{latitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour définir la latitude de la photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & Nouvelle latitude de la photo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhoto_a06617ad1dc4c7d5db689b10ec26deb4b}\label{classPhoto_a06617ad1dc4c7d5db689b10ec26deb4b}} 
+\index{Photo@{Photo}!setLongitude@{setLongitude}}
+\index{setLongitude@{setLongitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{setLongitude()}{setLongitude()}}
+{\footnotesize\ttfamily void Photo\+::set\+Longitude (\begin{DoxyParamCaption}\item[{float}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour définir la longitude de la photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em longitude} & Nouvelle longitude de la photo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhoto_a6cd4f8f6c2a9de796d9713968dad48d8}\label{classPhoto_a6cd4f8f6c2a9de796d9713968dad48d8}} 
+\index{Photo@{Photo}!write@{write}}
+\index{write@{write}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Photo\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour écrire les valeurs de l\textquotesingle{}objet photo dans un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flux de sortie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ad4d60320d227b076ca2be2c3ffc75322}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{photo_8hpp}{photo.\+hpp}}\end{DoxyCompactItemize}

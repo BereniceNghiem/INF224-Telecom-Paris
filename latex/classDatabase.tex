@@ -1,0 +1,233 @@
+\hypertarget{classDatabase}{}\doxysection{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+
+
+Classe pour les objets multimédias.  
+
+
+
+
+{\ttfamily \#include $<$database.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ \mbox{\hyperlink{classDatabase_a12cad3290cfcefe84322c62d5347d69f}{create\+Multimedia}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Méthode qui crée un objet multimédia. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ \mbox{\hyperlink{classDatabase_a23cd70ce6ab58f0291ce87aa50f6475a}{create\+Photo}} (const std\+::string \&name, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Méthode qui crée une photo. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ \mbox{\hyperlink{classDatabase_a6aa3d3d21ab5c655d3057fd39d497589}{create\+Video}} (const std\+::string \&name, const std\+::string \&filename, int duration)
+\begin{DoxyCompactList}\small\item\em Méthode qui crée une vidéo. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ \mbox{\hyperlink{classDatabase_a069dd38281e418b9bd62fba28d5e651e}{create\+Film}} (const std\+::string \&name, const std\+::string \&filename, int duration, const int $\ast$duration\+Chapters, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Méthode qui crée un film. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ \mbox{\hyperlink{classDatabase_aefa1636a52a470de54b681315d34a741}{create\+Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Méthode qui crée un groupe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_a70c66373edbf5bf6f06fe06ea090b43b}{find\+Media}} (const std\+::string \&name, std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Méthode qui trouve et affiche les valeurs d\textquotesingle{}un multimédia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_a8d00b973353babb49b7301ea132e7bbe}{find\+Group}} (const std\+::string \&name, std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Méthode qui trouve et affiche les valeurs d\textquotesingle{}un groupe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_a84dea0fbaa1f5ac0760d632688736b57}{play\+Media}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Méthode qui joue un multimédia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_aadcd6f7c6824dab50464c4ed4042d19a}{delete\+Media}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Méthode qui supprime un objet multimédia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_aee1d0543f3a32f0c1172937a6b300a13}{delete\+Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Méthode qui supprime un groupe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDatabase_ad5248bdee5b4d3fb9bbde84b34f1132f}\label{classDatabase_ad5248bdee5b4d3fb9bbde84b34f1132f}} 
+bool {\bfseries save\+All} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{classDatabase_a4ef66aa6bc23002d5f44a2d556d7018d}\label{classDatabase_a4ef66aa6bc23002d5f44a2d556d7018d}} 
+bool {\bfseries read\+All} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour les objets multimédias. 
+
+Classe qui sert à fabriquer et manipuler tous les objets de manière cohérente Fournit les méthodes pour créer un objet multimédia, afficher ses attributs ou encore le jouer 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatabase_a069dd38281e418b9bd62fba28d5e651e}\label{classDatabase_a069dd38281e418b9bd62fba28d5e651e}} 
+\index{Database@{Database}!createFilm@{createFilm}}
+\index{createFilm@{createFilm}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createFilm()}{createFilm()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ Database\+::create\+Film (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filename,  }\item[{int}]{duration,  }\item[{const int $\ast$}]{duration\+Chapters,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Méthode qui crée un film. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet film \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet film \\
+\hline
+{\em duration} & La durée de la vidéo \\
+\hline
+{\em duration\+Chapters} & Tableau d\textquotesingle{}entiers contenant la durée de chaque chapitre \\
+\hline
+{\em count} & Nombre de chapitres \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Film$>$ Pointeur intelligent vers l\textquotesingle{}objet film créé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_aefa1636a52a470de54b681315d34a741}\label{classDatabase_aefa1636a52a470de54b681315d34a741}} 
+\index{Database@{Database}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ Database\+::create\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Méthode qui crée un groupe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom du groupe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Group$>$ Pointeur intelligent vers le groupe créé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_a12cad3290cfcefe84322c62d5347d69f}\label{classDatabase_a12cad3290cfcefe84322c62d5347d69f}} 
+\index{Database@{Database}!createMultimedia@{createMultimedia}}
+\index{createMultimedia@{createMultimedia}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createMultimedia()}{createMultimedia()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ Database\+::create\+Multimedia (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Méthode qui crée un objet multimédia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Le type de l\textquotesingle{}objet multimédia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Multimedia$>$ Pointeur intelligent vers l\textquotesingle{}objet multimédia créé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_a23cd70ce6ab58f0291ce87aa50f6475a}\label{classDatabase_a23cd70ce6ab58f0291ce87aa50f6475a}} 
+\index{Database@{Database}!createPhoto@{createPhoto}}
+\index{createPhoto@{createPhoto}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createPhoto()}{createPhoto()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ Database\+::create\+Photo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Méthode qui crée une photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet photo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet photo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Photo$>$ Pointeur intelligent vers l\textquotesingle{}objet photo créé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_a6aa3d3d21ab5c655d3057fd39d497589}\label{classDatabase_a6aa3d3d21ab5c655d3057fd39d497589}} 
+\index{Database@{Database}!createVideo@{createVideo}}
+\index{createVideo@{createVideo}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createVideo()}{createVideo()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ Database\+::create\+Video (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filename,  }\item[{int}]{duration }\end{DoxyParamCaption})}
+
+
+
+Méthode qui crée une vidéo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet vidéo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet vidéo \\
+\hline
+{\em duration} & La durée de la vidéo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Video$>$ Pointeur intelligent vers l\textquotesingle{}objet vidéo créé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_aee1d0543f3a32f0c1172937a6b300a13}\label{classDatabase_aee1d0543f3a32f0c1172937a6b300a13}} 
+\index{Database@{Database}!deleteGroup@{deleteGroup}}
+\index{deleteGroup@{deleteGroup}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{deleteGroup()}{deleteGroup()}}
+{\footnotesize\ttfamily void Database\+::delete\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Méthode qui supprime un groupe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom du groupe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabase_aadcd6f7c6824dab50464c4ed4042d19a}\label{classDatabase_aadcd6f7c6824dab50464c4ed4042d19a}} 
+\index{Database@{Database}!deleteMedia@{deleteMedia}}
+\index{deleteMedia@{deleteMedia}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{deleteMedia()}{deleteMedia()}}
+{\footnotesize\ttfamily void Database\+::delete\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Méthode qui supprime un objet multimédia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet multimédia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabase_a8d00b973353babb49b7301ea132e7bbe}\label{classDatabase_a8d00b973353babb49b7301ea132e7bbe}} 
+\index{Database@{Database}!findGroup@{findGroup}}
+\index{findGroup@{findGroup}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{findGroup()}{findGroup()}}
+{\footnotesize\ttfamily void Database\+::find\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Méthode qui trouve et affiche les valeurs d\textquotesingle{}un groupe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom du groupe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabase_a70c66373edbf5bf6f06fe06ea090b43b}\label{classDatabase_a70c66373edbf5bf6f06fe06ea090b43b}} 
+\index{Database@{Database}!findMedia@{findMedia}}
+\index{findMedia@{findMedia}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{findMedia()}{findMedia()}}
+{\footnotesize\ttfamily void Database\+::find\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Méthode qui trouve et affiche les valeurs d\textquotesingle{}un multimédia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom l\textquotesingle{}objet multimédia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabase_a84dea0fbaa1f5ac0760d632688736b57}\label{classDatabase_a84dea0fbaa1f5ac0760d632688736b57}} 
+\index{Database@{Database}!playMedia@{playMedia}}
+\index{playMedia@{playMedia}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{playMedia()}{playMedia()}}
+{\footnotesize\ttfamily void Database\+::play\+Media (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Méthode qui joue un multimédia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom l\textquotesingle{}objet multimédia \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{database_8h}{database.\+h}}\item 
+cpp/database.\+cpp\end{DoxyCompactItemize}

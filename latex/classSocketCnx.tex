@@ -1,0 +1,49 @@
+\hypertarget{classSocketCnx}{}\doxysection{Socket\+Cnx Class Reference}
+\label{classSocketCnx}\index{SocketCnx@{SocketCnx}}
+
+
+Connection with a given client. Each \mbox{\hyperlink{classSocketCnx}{Socket\+Cnx}} uses a different thread.  
+
+
+
+
+Collaboration diagram for Socket\+Cnx\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}\label{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}} 
+{\bfseries Socket\+Cnx} (\mbox{\hyperlink{classTCPServer}{TCPServer}} \&, \mbox{\hyperlink{classSocket}{Socket}} $\ast$)
+\item 
+\mbox{\Hypertarget{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}\label{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}} 
+void {\bfseries process\+Requests} ()
+\item 
+\mbox{\Hypertarget{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}\label{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}} 
+{\bfseries Socket\+Cnx} (\mbox{\hyperlink{classTCPServer}{TCPServer}} \&, \mbox{\hyperlink{classSocket}{Socket}} $\ast$)
+\item 
+\mbox{\Hypertarget{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}\label{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}} 
+void {\bfseries process\+Requests} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a5e869a21c1331cdfc8fb9ef2282400d3}\label{classSocketCnx_a5e869a21c1331cdfc8fb9ef2282400d3}} 
+\mbox{\hyperlink{classTCPServer}{TCPServer}} \& {\bfseries server\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a6716cdf5a42ffec314c587994ac4188a}\label{classSocketCnx_a6716cdf5a42ffec314c587994ac4188a}} 
+\mbox{\hyperlink{classSocket}{Socket}} $\ast$ {\bfseries sock\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a08c10fe2deb6945ab0fb750a0f4d4c9f}\label{classSocketCnx_a08c10fe2deb6945ab0fb750a0f4d4c9f}} 
+\mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}} $\ast$ {\bfseries sockbuf\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}\label{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}} 
+std\+::thread {\bfseries thread\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Connection with a given client. Each \mbox{\hyperlink{classSocketCnx}{Socket\+Cnx}} uses a different thread. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/tcpserver/tcpserver.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,204 @@
+\hypertarget{classVideo}{}\doxysection{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+
+
+Classe pour les objets de type vidéo.  
+
+
+
+
+{\ttfamily \#include $<$video.\+hpp$>$}
+
+
+
+Inheritance diagram for Video\+:
+% FIG 0
+
+
+Collaboration diagram for Video\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}\label{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}} 
+\mbox{\hyperlink{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}{Video}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe Vidéo Initialise l\textquotesingle{}objet vidéo avec un nom vide et un nom de fichier vide. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVideo_a24314cbe2bc3dae6e0ae61ab3615a190}{Video}} (std\+::string name, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe Vidéo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVideo_aa8e9219cbaa20a17718deb3efcf4d839}{Video}} (std\+::string name, std\+::string filename, int duration)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe Vidéo avec paramètres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_aca0f92f98c7b6377aaa23af1645b8172}{set\+Duration}} (int duration)
+\begin{DoxyCompactList}\small\item\em Méthode pour définir la durée de la vidéo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Méthode pour obtenir la durée de la vidéo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classVideo_a7cf534ecd4b151360057486aa66cdb26}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Méthode pour obtenir le type de l\textquotesingle{}objet vidéo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_afac9536db0cb3bef55fa3c81f36d607b}{write}} (std\+::ostream \&f) const override
+\begin{DoxyCompactList}\small\item\em Méthode pour écrire les valeurs de l\textquotesingle{}objet vidéo dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_abbe0c774c1d57822712dd14ca9eda2a0}{read}} (std\+::istream \&f) override
+\begin{DoxyCompactList}\small\item\em Méthode pour lire les valeurs de l\textquotesingle{}objet vidéo depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVideo_aec3ca40bc8514ea36e9f6633508ed48a}{print\+Values}} (std\+::ostream \&out) const override
+\begin{DoxyCompactList}\small\item\em Méthode pour afficher les valeurs de l\textquotesingle{}objet vidéo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVideo_a89e11497f4f200f387805b10bd42922d}\label{classVideo_a89e11497f4f200f387805b10bd42922d}} 
+void \mbox{\hyperlink{classVideo_a89e11497f4f200f387805b10bd42922d}{play}} () const override
+\begin{DoxyCompactList}\small\item\em Méthode pour jouer la vidéo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVideo_a8534071e7e759e39c42fa9a51ae620eb}\label{classVideo_a8534071e7e759e39c42fa9a51ae620eb}} 
+int {\bfseries duration} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour les objets de type vidéo. 
+
+Classe qui sert à créer et manipuler des objets de type vidéo Fournit les méthodes pour créer un objet vidéo, afficher ses valeurs, ou encore l\textquotesingle{}afficher 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVideo_a24314cbe2bc3dae6e0ae61ab3615a190}\label{classVideo_a24314cbe2bc3dae6e0ae61ab3615a190}} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{Video()}{Video()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe Vidéo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet vidéo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet vidéo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVideo_aa8e9219cbaa20a17718deb3efcf4d839}\label{classVideo_aa8e9219cbaa20a17718deb3efcf4d839}} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{Video()}{Video()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filename,  }\item[{int}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe Vidéo avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de l\textquotesingle{}objet vidéo \\
+\hline
+{\em filename} & Le nom du fichier contenant l\textquotesingle{}objet vidéo \\
+\hline
+{\em duration} & La durée de la vidéo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}\label{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}} 
+\index{Video@{Video}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily int Video\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour obtenir la durée de la vidéo. 
+
+\begin{DoxyReturn}{Returns}
+int Durée de la vidéo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVideo_a7cf534ecd4b151360057486aa66cdb26}\label{classVideo_a7cf534ecd4b151360057486aa66cdb26}} 
+\index{Video@{Video}!getType@{getType}}
+\index{getType@{getType}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Video\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour obtenir le type de l\textquotesingle{}objet vidéo. 
+
+\begin{DoxyReturn}{Returns}
+std\+::strig Type de l\textquotesingle{}objet vidéo 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMultimedia_a14770025ca95da6df32ae141b9b75da5}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_aec3ca40bc8514ea36e9f6633508ed48a}\label{classVideo_aec3ca40bc8514ea36e9f6633508ed48a}} 
+\index{Video@{Video}!printValues@{printValues}}
+\index{printValues@{printValues}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{printValues()}{printValues()}}
+{\footnotesize\ttfamily void Video\+::print\+Values (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour afficher les valeurs de l\textquotesingle{}objet vidéo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Flux de sortie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_a670c5e7635860b676dce28b955093f73}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_abbe0c774c1d57822712dd14ca9eda2a0}\label{classVideo_abbe0c774c1d57822712dd14ca9eda2a0}} 
+\index{Video@{Video}!read@{read}}
+\index{read@{read}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Video\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour lire les valeurs de l\textquotesingle{}objet vidéo depuis un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flux d\textquotesingle{}entrée \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ae3278f47cb5425a460c2eb77d6cef9f7}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_aca0f92f98c7b6377aaa23af1645b8172}\label{classVideo_aca0f92f98c7b6377aaa23af1645b8172}} 
+\index{Video@{Video}!setDuration@{setDuration}}
+\index{setDuration@{setDuration}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{setDuration()}{setDuration()}}
+{\footnotesize\ttfamily void Video\+::set\+Duration (\begin{DoxyParamCaption}\item[{int}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode pour définir la durée de la vidéo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Nouvelle durée de la vidéo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVideo_afac9536db0cb3bef55fa3c81f36d607b}\label{classVideo_afac9536db0cb3bef55fa3c81f36d607b}} 
+\index{Video@{Video}!write@{write}}
+\index{write@{write}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Video\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Méthode pour écrire les valeurs de l\textquotesingle{}objet vidéo dans un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Flux de sortie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ad4d60320d227b076ca2be2c3ffc75322}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{video_8hpp}{video.\+hpp}}\end{DoxyCompactItemize}
