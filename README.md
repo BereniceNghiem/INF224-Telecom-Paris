@@ -1,5 +1,7 @@
 ## Bérénice Nghiêm
 
+Le but de ce TP est de créer l'ébauche du logiciel d'une set-top box multimédia permettant de jouer des vidéos, des films, d'afficher des photos, etc.
+
 # Partie C
 
 Pour distinguer la partie sérialisation, on utilise dans le main :
