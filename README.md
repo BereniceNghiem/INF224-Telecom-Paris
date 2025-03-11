@@ -1,5 +1,6 @@
 ## Bérénice Nghiêm
 
+Projet C++ / JavaSwing :
 Le but de ce TP est de créer l'ébauche du logiciel d'une set-top box multimédia permettant de jouer des vidéos, des films, d'afficher des photos, etc.
 
 # Partie C++
